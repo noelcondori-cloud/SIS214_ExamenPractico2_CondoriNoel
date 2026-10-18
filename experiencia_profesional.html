@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experiencia y proyectos académicos de Noel Fernando Condori Quispe en desarrollo web, redes y bases de datos.">
+    <meta name="keywords" content="Noel Condori, Ingeniería de Sistemas, Programación, La Paz, Bolivia, HTML5, CSS3, JavaScript, Hoja de Vida">
+    <meta name="author" content="Noel Fernando Condori Quispe">
+    <meta name="theme-color" content="#0b3c74">
+    <title>Experiencia | Noel Fernando Condori Quispe</title>
+
+    <!-- Hoja de estilos principal: importa tokens, base, layout y componentes -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JavaScript modular ES6+ (los módulos se cargan diferidos automáticamente) -->
+    <script type="module" src="jss/main.js"></script>
+</head>
+
+<body>
+    <!-- Enlace de salto para teclado y lectores de pantalla -->
+    <a href="#contenido" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- CABECERA: marca, botón de tema, menú hamburguesa y navegación -->
+    <header class="site-header">
+        <div class="header-bar">
+            <a href="index.html" class="brand" aria-label="Ir al inicio de la hoja de vida de Noel Fernando Condori Quispe">
+                <span class="brand-mark" aria-hidden="true">NC</span>
+                <span class="brand-name">Noel Condori</span>
+            </a>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="btn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+                    <span class="theme-icon" aria-hidden="true">🌙</span>
+                    <span class="theme-label">Modo oscuro</span>
+                </button>
+
+                <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-nav">
+                    <span class="menu-toggle-bar" aria-hidden="true"></span>
+                    <span class="menu-toggle-bar" aria-hidden="true"></span>
+                    <span class="menu-toggle-bar" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+
+        <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acerca_de_mi.html">Acerca de mí</a></li>
+                <li><a href="perfil_profesional.html">Perfil profesional</a></li>
+                <li><a href="formacion_academica.html">Formación académica</a></li>
+                <li><a href="experiencia_profesional.html" class="active" aria-current="page">Experiencia</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="idiomas.html">Idiomas</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contenido">
+        <!-- Presentación: datos a la izquierda y foto redonda a la derecha -->
+        <section class="hero" aria-labelledby="perfil-nombre">
+            <header>
+                <p class="doc-subtitle">Curriculum Vitae</p>
+                <h1 id="perfil-nombre" class="profile-name">Noel Fernando Condori Quispe</h1>
+                <p class="job-title">Estudiante de Ingeniería de Sistemas · 6to semestre</p>
+                <address class="contact-info">
+                    <ul class="contact-list">
+                        <li><span aria-hidden="true">📍</span> La Paz, Bolivia</li>
+                        <li><span aria-hidden="true">✉️</span> <a href="mailto:noel.condori@ucb.edu.bo">noel.condori@ucb.edu.bo</a></li>
+                        <li><span aria-hidden="true">📞</span> <a href="tel:+59173907534">+591 73907534</a></li>
+                    </ul>
+                </address>
+            </header>
+
+            <img src="assets/images/foto1.jpg" alt="Fotografía de Noel Fernando Condori Quispe" class="profile-img" width="190" height="190">
+
+        </section>
+
+        <div class="page-layout">
+            <section id="experiencia" class="page-section" aria-labelledby="experiencia-titulo">
+                <h2 id="experiencia-titulo" class="section-title">Experiencia y proyectos académicos</h2>
+                <div class="stack">
+                    <article class="card experience-card">
+                        <header class="experience-header">
+                            <hgroup>
+                                <h3>Desarrollo de página web personal</h3>
+                                <p class="institution">Universidad Católica Boliviana &ndash; Tecnología Web</p>
+                            </hgroup>
+                            <span class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg> <time datetime="2026-08">Agosto 2026 &ndash; Presente</time></span>
+                        </header>
+                        <p class="card-text"><strong>Descripción:</strong> Diseño y desarrollo de mi hoja de vida web. Comenzó como una maquetación con HTML5 semántico, formularios, tablas y elementos multimedia, y evolucionó a un sitio interactivo con CSS3 modular y JavaScript ES6+.</p>
+                        <section aria-label="Logros de Desarrollo de página web personal">
+                            <p><strong>Logros destacados:</strong></p>
+                            <ul class="bullet-list">
+                                <li>Estructura semántica y accesible (ARIA, foco visible, enlace de salto).</li>
+                                <li>Diseño responsivo mobile-first con Flexbox y CSS Grid.</li>
+                                <li>Funciones interactivas: tema persistente, menú hamburguesa, buscador, formulario validado y consumo de la API de GitHub.</li>
+                            </ul>
+                        </section>
+                        <footer>
+                            <ul class="tech-tags" aria-label="Tecnologías utilizadas">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                                <li>Git</li>
+                                <li>GitHub Pages</li>
+                            </ul>
+                        </footer>
+                    </article>
+
+                    <article class="card experience-card">
+                        <header class="experience-header">
+                            <hgroup>
+                                <h3>Robot aspiradora autónomo con ESP32</h3>
+                                <p class="institution">Proyecto personal &ndash; Electrónica e IoT</p>
+                            </hgroup>
+                            <span class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg> <time datetime="2026">2026 &ndash; En desarrollo</time></span>
+                        </header>
+                        <p class="card-text"><strong>Descripción:</strong> Prototipo de un robot de limpieza autónomo, inspirado en las aspiradoras tipo Roomba, controlado por un microcontrolador ESP32 que decide cómo moverse sin intervención humana.</p>
+                        <section aria-label="Logros de Robot aspiradora autónomo con ESP32">
+                            <p><strong>Logros destacados:</strong></p>
+                            <ul class="bullet-list">
+                                <li>Diseño y simulación del circuito en Wokwi antes de armarlo físicamente.</li>
+                                <li>Documentación del circuito con un diagrama en Fritzing.</li>
+                                <li>Programación de la lógica de movimiento autónomo en el ESP32.</li>
+                            </ul>
+                        </section>
+                        <footer>
+                            <ul class="tech-tags" aria-label="Tecnologías utilizadas">
+                                <li>ESP32</li>
+                                <li>C++</li>
+                                <li>Wokwi</li>
+                                <li>Fritzing</li>
+                            </ul>
+                        </footer>
+                    </article>
+
+                    <article class="card experience-card">
+                        <header class="experience-header">
+                            <hgroup>
+                                <h3>Sistema de venta y compra automática para cafeterías</h3>
+                                <p class="institution">Universidad Católica Boliviana &ndash; Redes de Computadoras</p>
+                            </hgroup>
+                            <span class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg> <time datetime="2025">2025</time></span>
+                        </header>
+                        <p class="card-text"><strong>Descripción:</strong> Participación en un equipo que desarrolló un sistema para automatizar la compra y venta en cafeterías, aplicando conceptos de redes de computadoras. Me encargué del diseño del frontend: las pantallas que usan clientes y personal.</p>
+                        <section aria-label="Logros de Sistema de venta y compra automática para cafeterías">
+                            <p><strong>Logros destacados:</strong></p>
+                            <ul class="bullet-list">
+                                <li>Implementación en equipo de las funcionalidades principales del sistema.</li>
+                                <li>Integración de la interfaz con el trabajo de red y base de datos de mis compañeros.</li>
+                                <li>Clasificación del proyecto al Workshop de la universidad.</li>
+                            </ul>
+                        </section>
+                        <footer>
+                            <ul class="tech-tags" aria-label="Tecnologías utilizadas">
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>JavaScript</li>
+                                <li>SQL</li>
+                                <li>Redes</li>
+                            </ul>
+                        </footer>
+                    </article>
+
+                    <article class="card experience-card">
+                        <header class="experience-header">
+                            <hgroup>
+                                <h3>Base de datos relacional en PostgreSQL</h3>
+                                <p class="institution">Universidad Católica Boliviana &ndash; Base de Datos II</p>
+                            </hgroup>
+                            <span class="badge"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg> <time datetime="2025">2025</time></span>
+                        </header>
+                        <p class="card-text"><strong>Descripción:</strong> Diseñé desde cero una base de datos para un caso académico. Una base de datos organiza la información en tablas conectadas entre sí (por ejemplo clientes, productos y ventas), de modo que nada se repite y todo se encuentra rápido.</p>
+                        <section aria-label="Logros de Base de datos relacional en PostgreSQL">
+                            <p><strong>Logros destacados:</strong></p>
+                            <ul class="bullet-list">
+                                <li>Análisis del caso y diseño del modelo entidad-relación (qué datos guardar y cómo se conectan).</li>
+                                <li>Normalización de las tablas para eliminar datos repetidos y evitar contradicciones.</li>
+                                <li>Creación de la base de datos en PostgreSQL con pgAdmin y consultas SQL para obtener reportes.</li>
+                            </ul>
+                        </section>
+                        <footer>
+                            <ul class="tech-tags" aria-label="Tecnologías utilizadas">
+                                <li>PostgreSQL</li>
+                                <li>pgAdmin</li>
+                                <li>SQL</li>
+                                <li>Modelado E-R</li>
+                                <li>Normalización</li>
+                            </ul>
+                        </footer>
+                    </article>
+                </div>
+            </section>
+
+            <aside class="page-aside" aria-label="Datos rápidos de Noel Fernando Condori Quispe">
+                <section class="card aside-card" aria-labelledby="aside-title">
+                    <h2 id="aside-title">Datos rápidos</h2>
+                    <ul class="aside-list">
+                        <li><span>Ubicación</span>La Paz, Bolivia</li>
+                        <li><span>Carrera</span>Ingeniería de Sistemas · 6to semestre</li>
+                        <li><span>Universidad</span>Universidad Católica Boliviana “San Pablo”</li>
+                        <li><span>Disponibilidad</span>Prácticas, proyectos y colaboración</li>
+                        <li><span>Correo</span><a href="mailto:noel.condori@ucb.edu.bo">noel.condori@ucb.edu.bo</a></li>
+                    </ul>
+                    <a href="formulario.html" class="btn btn-primary">Contactarme</a>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year">2026</span> Noel Fernando Condori Quispe. Todos los derechos reservados.</p>
+        <p>Desarrollado con HTML5 semántico, CSS3 modular y JavaScript ES6+.</p>
+        <p>Última actualización: <time datetime="2026-10-17">17 de octubre de 2026</time></p>
+    </footer>
+
+</body>
+</html>
