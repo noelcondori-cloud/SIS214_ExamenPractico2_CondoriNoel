@@ -1,0 +1,9 @@
+/* ==========================================================================
+   STYLES.CSS - Punto de entrada único de estilos
+   Orden: tokens -> reset/base -> layout (mobile-first) -> componentes
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('variables.css');
+@import url('base.css');
+@import url('layout.css');
+@import url('components.css');

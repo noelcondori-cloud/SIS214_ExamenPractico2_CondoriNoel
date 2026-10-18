@@ -1,0 +1,175 @@
+/* ==========================================================================
+   BASE.CSS - Reset universal, tipografía y elementos nativos
+   ========================================================================== */
+
+/* --- RESET UNIVERSAL (exigido por la rúbrica) --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+}
+
+a {
+  color: var(--secondary-color);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* El atributo hidden siempre oculta, aunque otra clase defina display */
+[hidden] {
+  display: none !important;
+}
+
+/* Listas con viñetas dentro de contenido */
+.bullet-list {
+  list-style: disc;
+  padding-left: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+/* Foco visible para teclado */
+:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* --- ENLACE DE SALTO (ACCESIBILIDAD) --- */
+.skip-link {
+  position: absolute;
+  left: var(--space-md);
+  top: -80px;
+  z-index: 3000;
+  background-color: var(--primary-color);
+  color: var(--text-on-primary);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: var(--space-sm);
+}
+
+/* Texto solo para lectores de pantalla */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* --- ELEMENTOS NATIVOS --- */
+figcaption {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: var(--space-xs);
+}
+
+mark {
+  background-color: var(--secondary-soft);
+  color: var(--primary-color);
+  padding: 0 var(--space-xs);
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+[data-theme="dark"] mark {
+  color: var(--secondary-color);
+}
+
+/* --- CONTROLES DE FORMULARIO --- */
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  color: inherit;
+}
+
+progress {
+  width: 100%;
+  height: 8px;
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  background-color: var(--border-color);
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--border-color);
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--secondary-color);
+  border-radius: var(--radius-pill);
+}
+
+progress::-moz-progress-bar {
+  background-color: var(--secondary-color);
+  border-radius: var(--radius-pill);
+}
+
+/* --- DIÁLOGO NATIVO --- */
+dialog {
+  margin: auto;
+}
+
+dialog::backdrop {
+  background: rgba(5, 15, 30, 0.6);
+  backdrop-filter: blur(3px);
+}
+
+/* --- MOVIMIENTO REDUCIDO --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}

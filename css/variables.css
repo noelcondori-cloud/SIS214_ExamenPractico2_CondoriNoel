@@ -1,0 +1,81 @@
+/* ==========================================================================
+   VARIABLES.CSS - Tokens de diseño centralizados en :root
+   Paleta profesional: azul marino + azul acero
+   ========================================================================== */
+
+/* --- MODO CLARO (por defecto) --- */
+:root {
+  /* Tokens obligatorios de la rúbrica */
+  --primary-color: #0b3c74;
+  --secondary-color: #1b6fb5;
+  --bg-color: #f3f6fa;
+  --text-color: #10213a;
+  --font-family-base: 'Manrope', 'Segoe UI', system-ui, sans-serif;
+  --spacing-unit: 1rem;
+
+  /* Superficies y bordes */
+  --surface-color: #ffffff;
+  --surface-alt: #e8eff8;
+  --border-color: #cfdbea;
+  --text-muted: #4b5d78;
+  --text-on-primary: #ffffff;
+  --primary-soft: rgba(11, 60, 116, 0.09);
+  --secondary-soft: rgba(27, 111, 181, 0.12);
+  --success-color: #15803d;
+  --error-color: #c62828;
+
+  /* Cabecera azul marino del perfil */
+  --hero-bg: linear-gradient(135deg, #0a2342 0%, #0f3566 60%, #15467f 100%);
+  --hero-text: #ffffff;
+  --hero-muted: #c4d4ea;
+
+  /* Escala tipográfica */
+  --font-size-sm: 0.82rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.15rem;
+  --font-size-xl: 1.45rem;
+  --font-size-hero: clamp(1.7rem, 5vw, 2.6rem);
+
+  /* Espaciados derivados de la unidad base */
+  --space-xs: calc(var(--spacing-unit) * 0.25);
+  --space-sm: calc(var(--spacing-unit) * 0.5);
+  --space-md: var(--spacing-unit);
+  --space-lg: calc(var(--spacing-unit) * 1.5);
+  --space-xl: calc(var(--spacing-unit) * 2.5);
+
+  /* Radios y sombras */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 999px;
+  --shadow-card: 0 2px 10px rgba(10, 35, 66, 0.07);
+  --shadow-hover: 0 10px 26px rgba(11, 60, 116, 0.16);
+
+  /* Medidas de estructura */
+  --content-width: 1120px;
+  --aside-width: 290px;
+}
+
+/* --- MODO OSCURO --- */
+[data-theme="dark"] {
+  --primary-color: #4f9be8;
+  --secondary-color: #8cc4ff;
+  --bg-color: #070f1c;
+  --text-color: #e6eef9;
+
+  --surface-color: #0e1a2d;
+  --surface-alt: #14243d;
+  --border-color: #22385a;
+  --text-muted: #9db0cc;
+  --text-on-primary: #061021;
+  --primary-soft: rgba(79, 155, 232, 0.14);
+  --secondary-soft: rgba(140, 196, 255, 0.12);
+  --success-color: #4ade80;
+  --error-color: #f87171;
+
+  --hero-bg: linear-gradient(135deg, #06142a 0%, #0b2242 60%, #0f2e57 100%);
+  --hero-muted: #a9bedb;
+
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 10px 26px rgba(79, 155, 232, 0.16);
+}
