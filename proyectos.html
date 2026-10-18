@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyectos destacados de Noel Fernando Condori Quispe y sus repositorios públicos en GitHub.">
+    <meta name="keywords" content="Noel Condori, Ingeniería de Sistemas, Programación, La Paz, Bolivia, HTML5, CSS3, JavaScript, Hoja de Vida">
+    <meta name="author" content="Noel Fernando Condori Quispe">
+    <meta name="theme-color" content="#0b3c74">
+    <title>Proyectos | Noel Fernando Condori Quispe</title>
+
+    <!-- Hoja de estilos principal: importa tokens, base, layout y componentes -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JavaScript modular ES6+ (los módulos se cargan diferidos automáticamente) -->
+    <script type="module" src="jss/main.js"></script>
+</head>
+
+<body>
+    <!-- Enlace de salto para teclado y lectores de pantalla -->
+    <a href="#contenido" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- CABECERA: marca, botón de tema, menú hamburguesa y navegación -->
+    <header class="site-header">
+        <div class="header-bar">
+            <a href="index.html" class="brand" aria-label="Ir al inicio de la hoja de vida de Noel Fernando Condori Quispe">
+                <span class="brand-mark" aria-hidden="true">NC</span>
+                <span class="brand-name">Noel Condori</span>
+            </a>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="btn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+                    <span class="theme-icon" aria-hidden="true">🌙</span>
+                    <span class="theme-label">Modo oscuro</span>
+                </button>
+
+                <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-nav">
+                    <span class="menu-toggle-bar" aria-hidden="true"></span>
+                    <span class="menu-toggle-bar" aria-hidden="true"></span>
+                    <span class="menu-toggle-bar" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+
+        <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acerca_de_mi.html">Acerca de mí</a></li>
+                <li><a href="perfil_profesional.html">Perfil profesional</a></li>
+                <li><a href="formacion_academica.html">Formación académica</a></li>
+                <li><a href="experiencia_profesional.html">Experiencia</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="idiomas.html">Idiomas</a></li>
+                <li><a href="proyectos.html" class="active" aria-current="page">Proyectos</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contenido">
+        <!-- Presentación: datos a la izquierda y foto redonda a la derecha -->
+        <section class="hero" aria-labelledby="perfil-nombre">
+            <header>
+                <p class="doc-subtitle">Curriculum Vitae</p>
+                <h1 id="perfil-nombre" class="profile-name">Noel Fernando Condori Quispe</h1>
+                <p class="job-title">Estudiante de Ingeniería de Sistemas · 6to semestre</p>
+                <address class="contact-info">
+                    <ul class="contact-list">
+                        <li><span aria-hidden="true">📍</span> La Paz, Bolivia</li>
+                        <li><span aria-hidden="true">✉️</span> <a href="mailto:noel.condori@ucb.edu.bo">noel.condori@ucb.edu.bo</a></li>
+                        <li><span aria-hidden="true">📞</span> <a href="tel:+59173907534">+591 73907534</a></li>
+                    </ul>
+                </address>
+            </header>
+
+            <img src="assets/images/foto1.jpg" alt="Fotografía de Noel Fernando Condori Quispe" class="profile-img" width="190" height="190">
+
+        </section>
+
+        <div class="page-layout">
+            <section id="proyectos" class="page-section" aria-labelledby="proyectos-titulo">
+                <h2 id="proyectos-titulo" class="section-title">Proyectos destacados</h2>
+                <p class="section-description">Escribe en el buscador para filtrar los proyectos al instante. Pulsa “Leer más” para conocer los detalles de cada uno.</p>
+                <search>
+                    <form class="filter-bar" role="search" aria-label="Filtrar proyectos">
+                        <p class="form-group">
+                            <label for="project-search">Buscar por nombre o tecnología</label>
+                            <input type="search" id="project-search" class="form-control" placeholder="Ej. JavaScript, ESP32, SQL…" autocomplete="off" aria-describedby="projects-count">
+                        </p>
+                        <p class="form-group">
+                            <label for="project-category">Categoría</label>
+                            <select id="project-category" class="form-control">
+                                <option value="todos">Todas</option>
+                                <option value="web">Desarrollo web</option>
+                                <option value="redes">Redes y web</option>
+                                <option value="iot">Electrónica e IoT</option>
+                                <option value="bd">Bases de datos</option>
+                            </select>
+                        </p>
+                    </form>
+                </search>
+
+                <p id="projects-count" class="results-count" role="status" aria-live="polite"></p>
+                <section id="projects-list" class="projects-grid" aria-label="Resultados de la búsqueda de proyectos">
+                    <noscript><p class="empty-state">Activa JavaScript para ver y filtrar los proyectos.</p></noscript>
+                </section>
+
+                <section id="github-repos" aria-labelledby="github-title" aria-busy="false">
+                    <h3 id="github-title" class="subsection-title">Mis repositorios en GitHub</h3>
+                    <p class="section-description">Información obtenida en tiempo real desde la API pública de GitHub.</p>
+                    <search>
+                        <form id="github-form" class="filter-bar github-form" aria-label="Consultar repositorios de GitHub">
+                            <p class="form-group">
+                                <label for="github-user">Usuario de GitHub</label>
+                                <input type="text" id="github-user" name="githubUser" class="form-control" placeholder="Ej. octocat" autocomplete="off" spellcheck="false" maxlength="39" required aria-describedby="github-status">
+                            </p>
+                            <button type="submit" class="btn btn-primary">Consultar</button>
+                        </form>
+                    </search>
+                    <p id="github-status" class="status-box" role="status" aria-live="polite" data-state="idle">Escribe un usuario de GitHub y pulsa “Consultar”.</p>
+                    <p id="github-profile" class="github-profile"></p>
+                    <section id="github-list" class="repo-grid" aria-label="Lista de repositorios"></section>
+                    <button type="button" id="github-retry" class="btn" hidden>Reintentar</button>
+                </section>
+            </section>
+
+            <aside class="page-aside" aria-label="Datos rápidos de Noel Fernando Condori Quispe">
+                <section class="card aside-card" aria-labelledby="aside-title">
+                    <h2 id="aside-title">Datos rápidos</h2>
+                    <ul class="aside-list">
+                        <li><span>Ubicación</span>La Paz, Bolivia</li>
+                        <li><span>Carrera</span>Ingeniería de Sistemas · 6to semestre</li>
+                        <li><span>Universidad</span>Universidad Católica Boliviana “San Pablo”</li>
+                        <li><span>Disponibilidad</span>Prácticas, proyectos y colaboración</li>
+                        <li><span>Correo</span><a href="mailto:noel.condori@ucb.edu.bo">noel.condori@ucb.edu.bo</a></li>
+                    </ul>
+                    <a href="formulario.html" class="btn btn-primary">Contactarme</a>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year">2026</span> Noel Fernando Condori Quispe. Todos los derechos reservados.</p>
+        <p>Desarrollado con HTML5 semántico, CSS3 modular y JavaScript ES6+.</p>
+        <p>Última actualización: <time datetime="2026-10-17">17 de octubre de 2026</time></p>
+    </footer>
+
+</body>
+</html>

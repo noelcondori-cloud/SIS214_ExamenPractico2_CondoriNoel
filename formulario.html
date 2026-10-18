@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Disponibilidad y formulario de contacto de Noel Fernando Condori Quispe.">
+    <meta name="keywords" content="Noel Condori, Ingeniería de Sistemas, Programación, La Paz, Bolivia, HTML5, CSS3, JavaScript, Hoja de Vida">
+    <meta name="author" content="Noel Fernando Condori Quispe">
+    <meta name="theme-color" content="#0b3c74">
+    <title>Contacto | Noel Fernando Condori Quispe</title>
+
+    <!-- Hoja de estilos principal: importa tokens, base, layout y componentes -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JavaScript modular ES6+ (los módulos se cargan diferidos automáticamente) -->
+    <script type="module" src="jss/main.js"></script>
+</head>
+
+<body>
+    <!-- Enlace de salto para teclado y lectores de pantalla -->
+    <a href="#contenido" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- CABECERA: marca, botón de tema, menú hamburguesa y navegación -->
+    <header class="site-header">
+        <div class="header-bar">
+            <a href="index.html" class="brand" aria-label="Ir al inicio de la hoja de vida de Noel Fernando Condori Quispe">
+                <span class="brand-mark" aria-hidden="true">NC</span>
+                <span class="brand-name">Noel Condori</span>
+            </a>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="btn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+                    <span class="theme-icon" aria-hidden="true">🌙</span>
+                    <span class="theme-label">Modo oscuro</span>
+                </button>
+
+                <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-nav">
+                    <span class="menu-toggle-bar" aria-hidden="true"></span>
+                    <span class="menu-toggle-bar" aria-hidden="true"></span>
+                    <span class="menu-toggle-bar" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+
+        <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acerca_de_mi.html">Acerca de mí</a></li>
+                <li><a href="perfil_profesional.html">Perfil profesional</a></li>
+                <li><a href="formacion_academica.html">Formación académica</a></li>
+                <li><a href="experiencia_profesional.html">Experiencia</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="idiomas.html">Idiomas</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a href="formulario.html" class="active" aria-current="page">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contenido">
+        <!-- Presentación: datos a la izquierda y foto redonda a la derecha -->
+        <section class="hero" aria-labelledby="perfil-nombre">
+            <header>
+                <p class="doc-subtitle">Curriculum Vitae</p>
+                <h1 id="perfil-nombre" class="profile-name">Noel Fernando Condori Quispe</h1>
+                <p class="job-title">Estudiante de Ingeniería de Sistemas · 6to semestre</p>
+                <address class="contact-info">
+                    <ul class="contact-list">
+                        <li><span aria-hidden="true">📍</span> La Paz, Bolivia</li>
+                        <li><span aria-hidden="true">✉️</span> <a href="mailto:noel.condori@ucb.edu.bo">noel.condori@ucb.edu.bo</a></li>
+                        <li><span aria-hidden="true">📞</span> <a href="tel:+59173907534">+591 73907534</a></li>
+                    </ul>
+                </address>
+            </header>
+
+            <img src="assets/images/foto1.jpg" alt="Fotografía de Noel Fernando Condori Quispe" class="profile-img" width="190" height="190">
+
+        </section>
+
+        <div class="page-layout">
+            <section id="contacto" class="page-section" aria-labelledby="contacto-titulo">
+                <h2 id="contacto-titulo" class="section-title">Contacto</h2>
+                <article class="card" aria-labelledby="disponibilidad-titulo">
+                    <p class="availability-status"><span class="status-dot" aria-hidden="true"></span>
+                        <strong id="disponibilidad-titulo">Disponible para prácticas, proyectos y colaboración</strong></p>
+                    <p class="card-text">
+                        Estoy abierto a oportunidades relacionadas con desarrollo web, diseño de interfaces y proyectos académicos o
+                        profesionales que involucren HTML, CSS y JavaScript.
+                    </p>
+                    <ul class="availability-list">
+                        <li><strong>Respuesta estimada</strong>24 a 48 horas</li>
+                        <li><strong>Horario</strong>Lunes a sábado</li>
+                        <li><strong>Modalidad</strong>Remoto o presencial en La Paz</li>
+                    </ul>
+                </article>
+
+                <article class="card spaced-top" aria-labelledby="form-titulo">
+                    <h3 id="form-titulo" class="card-title">Envíame un mensaje</h3>
+                    <form id="formulario-contacto" class="contact-form" action="#" method="post" novalidate>
+                        <fieldset>
+                            <legend class="sr-only">Datos de contacto y consulta</legend>
+                            <p class="form-help">Los campos con <span class="required">*</span> son obligatorios.</p>
+                    <p class="form-group">
+                        <label for="nombre">Nombre completo <span class="required" aria-hidden="true">*</span></label>
+                        <input type="text" id="nombre" name="nombre" class="form-control" data-label="El nombre" required aria-required="true" minlength="3" maxlength="60" placeholder="Ej. Juan Pérez" autocomplete="name" aria-describedby="nombre-message">
+                        <span id="nombre-message" class="field-message" aria-live="polite"></span>
+                    </p>
+                    <p class="form-group">
+                        <label for="email">Correo electrónico <span class="required" aria-hidden="true">*</span></label>
+                        <input type="email" id="email" name="email" class="form-control" data-label="El correo" required aria-required="true" placeholder="correo@ejemplo.com" autocomplete="email" aria-describedby="email-message">
+                        <span id="email-message" class="field-message" aria-live="polite"></span>
+                    </p>
+                    <p class="form-group">
+                        <label for="telefono">Teléfono / WhatsApp</label>
+                        <input type="tel" id="telefono" name="telefono" class="form-control" data-label="El teléfono" pattern="(\+?591\s?)?[67][0-9]{7}" placeholder="+591 70000000" autocomplete="tel" aria-describedby="telefono-help telefono-message">
+                        <small id="telefono-help" class="form-help">Opcional. Celular boliviano de 8 dígitos.</small>
+                        <span id="telefono-message" class="field-message" aria-live="polite"></span>
+                    </p>
+                    <p class="form-group">
+                        <label for="motivo">Motivo de contacto <span class="required" aria-hidden="true">*</span></label>
+                        <select id="motivo" name="motivo" class="form-control" data-label="El motivo" required aria-required="true" aria-describedby="motivo-message">
+                            <option value="" disabled selected>Selecciona un motivo</option>
+                            <option value="practica">Oferta de práctica o pasantía</option>
+                            <option value="proyecto">Propuesta de proyecto</option>
+                            <option value="empleo">Oportunidad laboral</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                        <span id="motivo-message" class="field-message" aria-live="polite"></span>
+                    </p>
+                    <p class="form-group">
+                        <label for="mensaje">Mensaje <span class="required" aria-hidden="true">*</span></label>
+                        <textarea id="mensaje" name="mensaje" class="form-control" data-label="El mensaje" rows="5" required aria-required="true" minlength="10" maxlength="500" placeholder="Escribe tu mensaje aquí…" aria-describedby="mensaje-message"></textarea>
+                        <span id="mensaje-message" class="field-message" aria-live="polite"></span>
+                    </p>
+                            <p class="form-group checkbox-group">
+                                <input type="checkbox" id="aceptacion" name="aceptacion" data-label="La aceptación" required aria-required="true" aria-describedby="aceptacion-message">
+                                <label for="aceptacion">Acepto que mis datos se usen solo para responder este mensaje <span class="required" aria-hidden="true">*</span></label>
+                                <span id="aceptacion-message" class="field-message" aria-live="polite"></span>
+                            </p>
+                        </fieldset>
+
+                        <p class="form-actions">
+                            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                            <button type="reset" class="btn">Limpiar campos</button>
+                        </p>
+                        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                    </form>
+                </article>
+            </section>
+
+            <aside class="page-aside" aria-label="Datos rápidos de Noel Fernando Condori Quispe">
+                <section class="card aside-card" aria-labelledby="aside-title">
+                    <h2 id="aside-title">Datos rápidos</h2>
+                    <ul class="aside-list">
+                        <li><span>Ubicación</span>La Paz, Bolivia</li>
+                        <li><span>Carrera</span>Ingeniería de Sistemas · 6to semestre</li>
+                        <li><span>Universidad</span>Universidad Católica Boliviana “San Pablo”</li>
+                        <li><span>Disponibilidad</span>Prácticas, proyectos y colaboración</li>
+                        <li><span>Correo</span><a href="mailto:noel.condori@ucb.edu.bo">noel.condori@ucb.edu.bo</a></li>
+                    </ul>
+                    <button type="button" id="open-dialog" class="btn btn-primary" aria-haspopup="dialog">Ver datos de contacto</button>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year">2026</span> Noel Fernando Condori Quispe. Todos los derechos reservados.</p>
+        <p>Desarrollado con HTML5 semántico, CSS3 modular y JavaScript ES6+.</p>
+        <p>Última actualización: <time datetime="2026-10-17">17 de octubre de 2026</time></p>
+    </footer>
+
+    <!-- Diálogo nativo con los datos de contacto -->
+    <dialog id="info-dialog" class="info-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-desc">
+        <span class="icon-box" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+        <h2 id="dialog-title" class="card-title">Información de contacto</h2>
+        <p id="dialog-desc">
+            Correo: <a href="mailto:noel.condori@ucb.edu.bo">noel.condori@ucb.edu.bo</a><br>
+            Teléfono: <a href="tel:+59173907534">+591 73907534</a><br>
+            Atención: lunes a sábado · La Paz, Bolivia
+        </p>
+        <form method="dialog">
+            <button type="submit" class="btn btn-primary">Entendido, cerrar</button>
+        </form>
+    </dialog>
+</body>
+</html>

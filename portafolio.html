@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio multimedia de Noel Fernando Condori Quispe: fotografía, audio y video.">
+    <meta name="keywords" content="Noel Condori, Ingeniería de Sistemas, Programación, La Paz, Bolivia, HTML5, CSS3, JavaScript, Hoja de Vida">
+    <meta name="author" content="Noel Fernando Condori Quispe">
+    <meta name="theme-color" content="#0b3c74">
+    <title>Portafolio | Noel Fernando Condori Quispe</title>
+
+    <!-- Hoja de estilos principal: importa tokens, base, layout y componentes -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JavaScript modular ES6+ (los módulos se cargan diferidos automáticamente) -->
+    <script type="module" src="jss/main.js"></script>
+</head>
+
+<body>
+    <!-- Enlace de salto para teclado y lectores de pantalla -->
+    <a href="#contenido" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- CABECERA: marca, botón de tema, menú hamburguesa y navegación -->
+    <header class="site-header">
+        <div class="header-bar">
+            <a href="index.html" class="brand" aria-label="Ir al inicio de la hoja de vida de Noel Fernando Condori Quispe">
+                <span class="brand-mark" aria-hidden="true">NC</span>
+                <span class="brand-name">Noel Condori</span>
+            </a>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="btn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+                    <span class="theme-icon" aria-hidden="true">🌙</span>
+                    <span class="theme-label">Modo oscuro</span>
+                </button>
+
+                <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-nav">
+                    <span class="menu-toggle-bar" aria-hidden="true"></span>
+                    <span class="menu-toggle-bar" aria-hidden="true"></span>
+                    <span class="menu-toggle-bar" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+
+        <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acerca_de_mi.html">Acerca de mí</a></li>
+                <li><a href="perfil_profesional.html">Perfil profesional</a></li>
+                <li><a href="formacion_academica.html">Formación académica</a></li>
+                <li><a href="experiencia_profesional.html">Experiencia</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="idiomas.html">Idiomas</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="portafolio.html" class="active" aria-current="page">Portafolio</a></li>
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contenido">
+        <!-- Presentación: datos a la izquierda y foto redonda a la derecha -->
+        <section class="hero" aria-labelledby="perfil-nombre">
+            <header>
+                <p class="doc-subtitle">Curriculum Vitae</p>
+                <h1 id="perfil-nombre" class="profile-name">Noel Fernando Condori Quispe</h1>
+                <p class="job-title">Estudiante de Ingeniería de Sistemas · 6to semestre</p>
+                <address class="contact-info">
+                    <ul class="contact-list">
+                        <li><span aria-hidden="true">📍</span> La Paz, Bolivia</li>
+                        <li><span aria-hidden="true">✉️</span> <a href="mailto:noel.condori@ucb.edu.bo">noel.condori@ucb.edu.bo</a></li>
+                        <li><span aria-hidden="true">📞</span> <a href="tel:+59173907534">+591 73907534</a></li>
+                    </ul>
+                </address>
+            </header>
+
+            <img src="assets/images/foto1.jpg" alt="Fotografía de Noel Fernando Condori Quispe" class="profile-img" width="190" height="190">
+
+        </section>
+
+        <div class="page-layout">
+            <section id="portafolio" class="page-section" aria-labelledby="portafolio-titulo">
+                <h2 id="portafolio-titulo" class="section-title">Portafolio multimedia</h2>
+                <ul class="portfolio-grid">
+                    <li>
+                        <article class="card media-card">
+                            <header><span class="icon-box" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></svg></span><h3>Fotografía de presentación</h3></header>
+                            <figure>
+                                <img src="assets/images/imagenproyecto.jpg" alt="Fotografía profesional de Noel Fernando Condori Quispe en un laboratorio de computación" loading="lazy" class="media-photo" width="1200" height="800">
+                                <figcaption>Figura 1: Noel Fernando Condori Quispe.</figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="card media-card">
+                            <header><span class="icon-box" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></span><h3>Presentación en audio</h3></header>
+                            <p class="card-text">Presentación profesional breve sobre quién soy y lo que hago.</p>
+                            <figure>
+                                <audio controls preload="metadata" aria-label="Presentación profesional en audio">
+                                    <source src="assets/audios/audioproyecto.mp3" type="audio/mpeg">
+                                    <source src="assets/audios/audioproyecto.aac" type="audio/aac">
+                                    Tu navegador no soporta audio HTML5.
+                                </audio>
+                                <figcaption>Audio 1: Presentación profesional breve.</figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                    <li class="full-width-media">
+                        <article class="card media-card">
+                            <header><span class="icon-box" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m22 8-6 4 6 4V8Z"/><rect width="14" height="12" x="2" y="6" rx="2" ry="2"/></svg></span><h3>Video de proyecto</h3></header>
+                            <p class="card-text">Presentación en video de mi proyecto de hoja de vida.</p>
+                            <figure>
+                                <p class="video-wrapper">
+                                    <video controls playsinline preload="metadata" poster="assets/images/poster-video.jpg" aria-label="Video de presentación de mi proyecto">
+                                        <source src="assets/videos/videoproyecto.mp4" type="video/mp4">
+                                        Tu navegador no admite video HTML5.
+                                    </video>
+                                </p>
+                                <figcaption>Video 1: Presentación de mi proyecto de hoja de vida.</figcaption>
+                            </figure>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+
+            <aside class="page-aside" aria-label="Datos rápidos de Noel Fernando Condori Quispe">
+                <section class="card aside-card" aria-labelledby="aside-title">
+                    <h2 id="aside-title">Datos rápidos</h2>
+                    <ul class="aside-list">
+                        <li><span>Ubicación</span>La Paz, Bolivia</li>
+                        <li><span>Carrera</span>Ingeniería de Sistemas · 6to semestre</li>
+                        <li><span>Universidad</span>Universidad Católica Boliviana “San Pablo”</li>
+                        <li><span>Disponibilidad</span>Prácticas, proyectos y colaboración</li>
+                        <li><span>Correo</span><a href="mailto:noel.condori@ucb.edu.bo">noel.condori@ucb.edu.bo</a></li>
+                    </ul>
+                    <a href="formulario.html" class="btn btn-primary">Contactarme</a>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year">2026</span> Noel Fernando Condori Quispe. Todos los derechos reservados.</p>
+        <p>Desarrollado con HTML5 semántico, CSS3 modular y JavaScript ES6+.</p>
+        <p>Última actualización: <time datetime="2026-10-17">17 de octubre de 2026</time></p>
+    </footer>
+
+</body>
+</html>
