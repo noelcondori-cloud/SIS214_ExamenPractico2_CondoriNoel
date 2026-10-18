@@ -1,0 +1,214 @@
+/* ==========================================================================
+   LAYOUT.CSS - Estructura general con estrategia MOBILE-FIRST
+   Móvil: < 768px (estilos base) | Tablet: 768px - 1024px | Escritorio: > 1024px
+   Flexbox: alineaciones de una dimensión (barra, botones, listas)
+   CSS Grid: esquemas de dos dimensiones (perfil, contenido + aside, tarjetas)
+   ========================================================================== */
+
+/* ---------- CABECERA FIJA (FLEXBOX) ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-card);
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-sm) var(--space-md);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* ---------- MENÚ (MÓVIL: OCULTO HASTA PULSAR LA HAMBURGUESA) ---------- */
+.main-nav {
+  display: none;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--surface-color);
+}
+
+.main-nav.is-open {
+  display: block;
+}
+
+.main-nav ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xs);
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-sm) var(--space-md) var(--space-md);
+}
+
+/* ---------- CONTENIDO PRINCIPAL ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  background: var(--hero-bg);
+  color: var(--hero-text);
+  /* Centra el contenido sin contenedores extra */
+  padding: var(--space-lg) max(var(--space-md), calc((100% - var(--content-width)) / 2)) var(--space-xl);
+}
+
+/* En móvil la foto sube, pero queda alineada a la DERECHA */
+.hero .profile-img {
+  order: -1;
+  justify-self: end;
+}
+
+.hero .quote-box {
+  grid-column: 1 / -1;
+}
+
+.page-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+}
+
+.page-section {
+  min-width: 0;
+}
+
+/* ---------- GRILLAS DE TARJETAS ---------- */
+.info-grid,
+.cards-grid,
+.profile-grid,
+.portfolio-grid,
+.projects-grid,
+.repo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* ---------- PIE DE PÁGINA ---------- */
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-lg) var(--space-md);
+  background-color: var(--surface-color);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+/* ==========================================================================
+   TABLET: 768px a 1024px
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* El menú desplegable se organiza en dos columnas */
+  .main-nav ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .header-bar {
+    padding: var(--space-sm) var(--space-lg);
+  }
+
+  /* Perfil: datos a la izquierda, foto a la derecha */
+  .hero {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: var(--space-lg) var(--space-xl);
+    padding: var(--space-xl) max(var(--space-lg), calc((100% - var(--content-width)) / 2));
+  }
+
+  .hero .profile-img {
+    order: 0;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .page-layout {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .info-grid,
+  .cards-grid,
+  .profile-grid,
+  .portfolio-grid,
+  .repo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-grid .full-width-media {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ==========================================================================
+   ESCRITORIO: más de 1024px
+   ========================================================================== */
+@media (min-width: 1025px) {
+  /* El menú queda siempre visible (la hamburguesa se oculta en components.css) */
+  .main-nav,
+  .main-nav.is-open {
+    display: block;
+    border-top: none;
+  }
+
+  .main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-xs);
+    padding: 0 var(--space-lg) var(--space-sm);
+  }
+
+  /* Contenido + barra lateral <aside> */
+  .page-layout {
+    grid-template-columns: minmax(0, 1fr) var(--aside-width);
+    align-items: start;
+  }
+
+  .page-aside {
+    position: sticky;
+    top: 130px;
+  }
+
+  .projects-grid,
+  .repo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Abrir "Leer más" en una tarjeta no estira a su vecina */
+.projects-grid {
+  align-items: start;
+}
