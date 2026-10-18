@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nivel de dominio de idiomas de Noel Fernando Condori Quispe: español, inglés e italiano.">
+    <meta name="keywords" content="Noel Condori, Ingeniería de Sistemas, Programación, La Paz, Bolivia, HTML5, CSS3, JavaScript, Hoja de Vida">
+    <meta name="author" content="Noel Fernando Condori Quispe">
+    <meta name="theme-color" content="#0b3c74">
+    <title>Idiomas | Noel Fernando Condori Quispe</title>
+
+    <!-- Hoja de estilos principal: importa tokens, base, layout y componentes -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JavaScript modular ES6+ (los módulos se cargan diferidos automáticamente) -->
+    <script type="module" src="jss/main.js"></script>
+</head>
+
+<body>
+    <!-- Enlace de salto para teclado y lectores de pantalla -->
+    <a href="#contenido" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- CABECERA: marca, botón de tema, menú hamburguesa y navegación -->
+    <header class="site-header">
+        <div class="header-bar">
+            <a href="index.html" class="brand" aria-label="Ir al inicio de la hoja de vida de Noel Fernando Condori Quispe">
+                <span class="brand-mark" aria-hidden="true">NC</span>
+                <span class="brand-name">Noel Condori</span>
+            </a>
+
+            <div class="header-actions">
+                <button id="theme-toggle" class="btn" type="button" aria-label="Cambiar a modo oscuro" aria-pressed="false">
+                    <span class="theme-icon" aria-hidden="true">🌙</span>
+                    <span class="theme-label">Modo oscuro</span>
+                </button>
+
+                <button id="menu-toggle" class="menu-toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-nav">
+                    <span class="menu-toggle-bar" aria-hidden="true"></span>
+                    <span class="menu-toggle-bar" aria-hidden="true"></span>
+                    <span class="menu-toggle-bar" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+
+        <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acerca_de_mi.html">Acerca de mí</a></li>
+                <li><a href="perfil_profesional.html">Perfil profesional</a></li>
+                <li><a href="formacion_academica.html">Formación académica</a></li>
+                <li><a href="experiencia_profesional.html">Experiencia</a></li>
+                <li><a href="habilidades.html">Habilidades</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="idiomas.html" class="active" aria-current="page">Idiomas</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="portafolio.html">Portafolio</a></li>
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contenido">
+        <!-- Presentación: datos a la izquierda y foto redonda a la derecha -->
+        <section class="hero" aria-labelledby="perfil-nombre">
+            <header>
+                <p class="doc-subtitle">Curriculum Vitae</p>
+                <h1 id="perfil-nombre" class="profile-name">Noel Fernando Condori Quispe</h1>
+                <p class="job-title">Estudiante de Ingeniería de Sistemas · 6to semestre</p>
+                <address class="contact-info">
+                    <ul class="contact-list">
+                        <li><span aria-hidden="true">📍</span> La Paz, Bolivia</li>
+                        <li><span aria-hidden="true">✉️</span> <a href="mailto:noel.condori@ucb.edu.bo">noel.condori@ucb.edu.bo</a></li>
+                        <li><span aria-hidden="true">📞</span> <a href="tel:+59173907534">+591 73907534</a></li>
+                    </ul>
+                </address>
+            </header>
+
+            <img src="assets/images/foto1.jpg" alt="Fotografía de Noel Fernando Condori Quispe" class="profile-img" width="190" height="190">
+
+        </section>
+
+        <div class="page-layout">
+            <section id="idiomas" class="page-section" aria-labelledby="idiomas-titulo">
+                <h2 id="idiomas-titulo" class="section-title">Dominio de idiomas</h2>
+                <p class="section-description">Nivel de lectura, escritura y conversación. En pantallas pequeñas puedes deslizar la tabla horizontalmente.</p>
+                <article aria-label="Idiomas que manejo">
+                <figure class="table-container" role="region" aria-label="Tabla de idiomas" tabindex="0">
+                    <table class="languages-table">
+                        <caption>Nivel de lectura, escritura y conversación</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Idioma</th>
+                                <th scope="col">Lectura</th>
+                                <th scope="col">Escritura</th>
+                                <th scope="col">Conversación</th>
+                                <th scope="col">Progreso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Español</th>
+                                <td>Avanzado</td>
+                                <td>Avanzado</td>
+                                <td>Nativo</td>
+                                <td class="progress-cell">
+                                    <p class="progress-info"><span>Conversación</span><strong>100%</strong></p>
+                                    <progress value="100" max="100" aria-label="Dominio de español: 100%">100%</progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Aymara</th>
+                                <td>Básico</td>
+                                <td>Básico</td>
+                                <td>Intermedio</td>
+                                <td class="progress-cell">
+                                    <p class="progress-info"><span>Conversación</span><strong>50%</strong></p>
+                                    <progress value="50" max="100" aria-label="Dominio de aymara: 50%">50%</progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Italiano</th>
+                                <td>Básico</td>
+                                <td>Básico</td>
+                                <td>Intermedio</td>
+                                <td class="progress-cell">
+                                    <p class="progress-info"><span>Conversación</span><strong>55%</strong></p>
+                                    <progress value="55" max="100" aria-label="Dominio de italiano: 55%">55%</progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Inglés</th>
+                                <td>Intermedio</td>
+                                <td>Básico</td>
+                                <td>Básico</td>
+                                <td class="progress-cell">
+                                    <p class="progress-info"><span>Conversación</span><strong>35%</strong></p>
+                                    <progress value="35" max="100" aria-label="Dominio de inglés: 35%">35%</progress>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row" colspan="4">Total de idiomas</th>
+                                <td><strong>4 (1 nativo, 1 originario de Bolivia, 2 extranjeros)</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </figure>
+                </article>
+            </section>
+
+            <aside class="page-aside" aria-label="Datos rápidos de Noel Fernando Condori Quispe">
+                <section class="card aside-card" aria-labelledby="aside-title">
+                    <h2 id="aside-title">Datos rápidos</h2>
+                    <ul class="aside-list">
+                        <li><span>Ubicación</span>La Paz, Bolivia</li>
+                        <li><span>Carrera</span>Ingeniería de Sistemas · 6to semestre</li>
+                        <li><span>Universidad</span>Universidad Católica Boliviana “San Pablo”</li>
+                        <li><span>Disponibilidad</span>Prácticas, proyectos y colaboración</li>
+                        <li><span>Correo</span><a href="mailto:noel.condori@ucb.edu.bo">noel.condori@ucb.edu.bo</a></li>
+                    </ul>
+                    <a href="formulario.html" class="btn btn-primary">Contactarme</a>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="site-footer">
+        <p>&copy; <span id="current-year">2026</span> Noel Fernando Condori Quispe. Todos los derechos reservados.</p>
+        <p>Desarrollado con HTML5 semántico, CSS3 modular y JavaScript ES6+.</p>
+        <p>Última actualización: <time datetime="2026-10-17">17 de octubre de 2026</time></p>
+    </footer>
+
+</body>
+</html>
